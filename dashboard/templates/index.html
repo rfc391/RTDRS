@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTDRS Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Threat Detection Dashboard</h1>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td id="temperature">Loading...</td>
+        </tr>
+        <tr>
+            <td>Humidity</td>
+            <td id="humidity">Loading...</td>
+        </tr>
+        <tr>
+            <td>Gas Level</td>
+            <td id="gas_level">Loading...</td>
+        </tr>
+        <tr>
+            <td>Motion Detected</td>
+            <td id="motion_detected">Loading...</td>
+        </tr>
+    </table>
+
+    <script>
+        async function fetchSensorData() {
+            const response = await fetch('/sensor_data');
+            const data = await response.json();
+            document.getElementById('temperature').innerText = data.temperature + ' °C';
+            document.getElementById('humidity').innerText = data.humidity + ' %';
+            document.getElementById('gas_level').innerText = data.gas_level + ' ppm';
+            document.getElementById('motion_detected').innerText = data.motion_detected ? 'Yes' : 'No';
+        }
+
+        setInterval(fetchSensorData, 2000);
+        fetchSensorData();
+    </script>
+</body>
+</html>
