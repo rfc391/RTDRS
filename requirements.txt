@@ -8,6 +8,6 @@ grpcio-tools==1.57.0
 cloudflare==2.8.15
 influxdb-client==1.38.0
 immudb-py==1.1.0
-pycryptodome==3.17
+pycryptodome==3.19.1
 quiche==0.9.0
 pycryptodome>=3.19.1
