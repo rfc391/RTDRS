@@ -10,3 +10,4 @@ influxdb-client==1.38.0
 immudb-py==1.1.0
 pycryptodome==3.17
 quiche==0.9.0
+pycryptodome>=3.19.1
