@@ -74,3 +74,47 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 ## License
 This project is licensed under the MIT License.
+
+
+## Setup Instructions
+
+### Prerequisites
+- Python 3.8+
+- pip (Python package installer)
+- Docker (for InfluxDB setup, optional)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd RTDRS-main
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up InfluxDB (optional):
+   - Run InfluxDB in Docker:
+     ```bash
+     docker run -d -p 8086:8086 --name influxdb influxdb:latest
+     ```
+   - Create a bucket and generate an API token.
+
+### Running the Project
+1. Start the IoT simulation module:
+   ```bash
+   python iot_simulation/sensor_data_simulation.py
+   ```
+2. Start the dashboard application:
+   ```bash
+   python dashboard/dashboard_app.py
+   ```
+3. Access the dashboard in your browser at `http://localhost:5001`.
+
+## Additional Notes
+- Update the InfluxDB token and organization details in `dashboard/dashboard_app.py` before running.
+- Replace placeholder files for YOLO with actual weights and configuration files.
+
+## Contributing
+- Feel free to contribute by submitting issues or pull requests.
+
