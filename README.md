@@ -1,5 +1,5 @@
 
-# NanoTech Real-Time Threat Detection and Response System (RTDRS)
+# Real-Time Threat Detection and Response System (RTDRS)
 
 The RTDRS is a cutting-edge, open-source project designed to enhance public safety using real-time technologies. It combines advanced AI models, secure blockchain frameworks, IoT sensors, and post-quantum cryptography to deliver robust threat detection and response capabilities.
 
@@ -26,8 +26,8 @@ RTDRS/
 ## Installation and Setup
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/rfc391/NanoTech.git
-    cd NanoTech
+    git clone https://github.com/rfc391/RDTRS.git
+    cd RTDRS
     ```
 
 2. **Install Dependencies**:
