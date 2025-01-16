@@ -35,20 +35,12 @@ RTDRS/
     pip install -r requirements.txt
     ```
 
-3. **Configure Cloudflare**:
-    - Set environment variables for Cloudflare secrets:
-        ```bash
-        export CLOUDFLARE_API_TOKEN=<your_token>
-        export CLOUDFLARE_ACCOUNT_ID=<your_account_id>
-        export CLOUDFLARE_TUNNEL_ID=<your_tunnel_id>
-        ```
-
-4. **Run the System**:
+3. **Run the System**:
     - AI Detection: `python ./ai/object_detection.py`
     - IoT Simulation: `python ./iot_simulation/sensor_data_simulation.py`
     - Dashboard: `python ./dashboard/dashboard_app.py`
 
-5. **Access the Dashboard**:
+4. **Access the Dashboard**:
     Navigate to `http://localhost:5001`.
 
 ## Additional Notes
