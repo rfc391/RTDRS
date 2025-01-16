@@ -1,120 +1,59 @@
 
-# Real-Time Threat Detection and Response System (RTDRS)
+# NanoTech Real-Time Threat Detection and Response System (RTDRS)
 
-The RTDRS is a cutting-edge system designed for real-time detection, analysis, and response to potential threats in public spaces, critical infrastructure, and beyond. 
-This project leverages AI, blockchain, IoT sensors, and quantum-safe cryptography to provide a robust counter-terrorism solution.
+The RTDRS is a cutting-edge, open-source project designed to enhance public safety using real-time technologies. It combines advanced AI models, secure blockchain frameworks, IoT sensors, and post-quantum cryptography to deliver robust threat detection and response capabilities.
 
 ## Features
-- **AI Threat Detection**: Real-time object detection and behavioral analysis using OpenCV.
-- **Blockchain Framework**: Immutable and secure data logging with smart contracts for inter-agency collaboration.
-- **IoT Simulation**: Mock sensor data for testing temperature, gas levels, motion detection, and more.
-- **Real-Time Dashboard**: Web-based visualization of sensor data and alerts.
-- **Quantum Cryptography Simulation**: Secure communication protocols.
+- **AI Threat Detection**: Real-time object detection and behavioral analysis using OpenCV AI models.
+- **Blockchain Framework**: Secure, immutable logging for data integrity and inter-agency collaboration.
+- **IoT Data Simulation**: Mock IoT sensor data for live testing of environmental factors.
+- **Web Dashboard**: Interactive, web-based UI for monitoring and real-time alerts.
+- **Quantum-Safe Cryptography**: Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD).
+- **Secure Networking**: Integration with Cloudflare Zero Trust and QUIC protocols.
 
-## Project Structure
+## Updated Architecture
 ```
 RTDRS/
-├── ai/                # AI models and scripts for threat detection
-│   └── object_detection.py
-├── blockchain/        # Blockchain framework
-│   └── blockchain_framework.py
-├── dashboard/         # Frontend and backend for real-time dashboard
-│   ├── dashboard_app.py
-│   └── templates/
-│       └── index.html
-├── iot_simulation/    # IoT sensor data simulation
-│   └── sensor_data_simulation.py
-├── docs/              # Documentation
-│   └── installation_guide.md
-└── README.md          # Overview and setup instructions
+├── ai/                # AI models for threat detection
+├── blockchain/        # Blockchain-based secure logging
+├── cloudflare/        # Configurations for secure Cloudflare integration
+├── dashboard/         # Web-based dashboard and backend services
+├── iot_simulation/    # Simulated IoT data streams
+├── docs/              # Documentation and standards
+└── configs/           # Secure configuration files for Cloudflare, InfluxDB, and immudb
 ```
 
 ## Installation and Setup
-
-### Prerequisites
-- Python 3.8 or higher
-- Flask
-- OpenCV
-- Required Python libraries (install using `requirements.txt`)
-
-### Steps
-1. Clone the repository:
+1. **Clone the repository**:
     ```bash
-    git clone https://github.com/YourUsername/RTDRS.git
-    cd RTDRS
+    git clone https://github.com/rfc391/NanoTech.git
+    cd NanoTech
     ```
 
-2. Install dependencies:
+2. **Install Dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Run the modules:
-    - **AI Threat Detection**:
+3. **Configure Cloudflare**:
+    - Set environment variables for Cloudflare secrets:
         ```bash
-        python ./ai/object_detection.py
-        ```
-    - **Blockchain Framework**:
-        ```bash
-        python ./blockchain/blockchain_framework.py
-        ```
-    - **IoT Simulation**:
-        ```bash
-        python ./iot_simulation/sensor_data_simulation.py
-        ```
-    - **Real-Time Dashboard**:
-        ```bash
-        python ./dashboard/dashboard_app.py
+        export CLOUDFLARE_API_TOKEN=<your_token>
+        export CLOUDFLARE_ACCOUNT_ID=<your_account_id>
+        export CLOUDFLARE_TUNNEL_ID=<your_tunnel_id>
         ```
 
-4. Access the dashboard at `http://localhost:5001`.
+4. **Run the System**:
+    - AI Detection: `python ./ai/object_detection.py`
+    - IoT Simulation: `python ./iot_simulation/sensor_data_simulation.py`
+    - Dashboard: `python ./dashboard/dashboard_app.py`
 
-## Contributing
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
+5. **Access the Dashboard**:
+    Navigate to `http://localhost:5001`.
+
+## Additional Notes
+- Ensure all quantum-safe and post-quantum cryptography keys are configured before production.
+- Follow DARPA and ISO guidelines for deployment in high-security environments.
 
 ## License
 This project is licensed under the MIT License.
-
-
-## Setup Instructions
-
-### Prerequisites
-- Python 3.8+
-- pip (Python package installer)
-- Docker (for InfluxDB setup, optional)
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd RTDRS-main
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up InfluxDB (optional):
-   - Run InfluxDB in Docker:
-     ```bash
-     docker run -d -p 8086:8086 --name influxdb influxdb:latest
-     ```
-   - Create a bucket and generate an API token.
-
-### Running the Project
-1. Start the IoT simulation module:
-   ```bash
-   python iot_simulation/sensor_data_simulation.py
-   ```
-2. Start the dashboard application:
-   ```bash
-   python dashboard/dashboard_app.py
-   ```
-3. Access the dashboard in your browser at `http://localhost:5001`.
-
-## Additional Notes
-- Update the InfluxDB token and organization details in `dashboard/dashboard_app.py` before running.
-- Replace placeholder files for YOLO with actual weights and configuration files.
-
-## Contributing
-- Feel free to contribute by submitting issues or pull requests.
-

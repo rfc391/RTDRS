@@ -1,0 +1,5 @@
+{
+    "IMMUDB_URL": "http://localhost:3322",
+    "IMMUDB_USER": "immudb",
+    "IMMUDB_PASSWORD": "<your_immudb_password>"
+}

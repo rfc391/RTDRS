@@ -1,0 +1,5 @@
+{
+    "CLOUDFLARE_API_TOKEN": "<your_api_token>",
+    "CLOUDFLARE_ACCOUNT_ID": "<your_account_id>",
+    "CLOUDFLARE_TUNNEL_ID": "<your_tunnel_id>"
+}
